@@ -9,9 +9,9 @@ description: >-
 
 # Safe crontab editing
 
-`crontab` overwrites the *entire* table at once, and the `crontab <file>` form
-can silently no-op (exit 0, nothing written) in sandboxed/macOS shells. Two rules
-prevent lost jobs.
+`crontab` overwrites the *entire* table at once. The `crontab <file>` form can
+also silently no-op (exit 0, nothing written) under some sandboxed/restricted
+shells. Works the same on Linux and macOS. Two rules prevent lost jobs.
 
 ## 1. Back up first
 
@@ -23,8 +23,9 @@ An empty/nonzero result just means the table is empty — that's fine.
 
 ## 2. Install via stdin, then verify by reading back
 
-Pipe the content in on **stdin**. Do not use `crontab <file>`, and do not trust
-the exit code — only the read-back proves it worked.
+Pipe the content in on **stdin** — portable and reliable everywhere. Avoid
+`crontab <file>`, and do not trust the exit code; only the read-back proves it
+worked.
 
 ```bash
 crontab - < /path/to/new_crontab.txt        # install (NOT: crontab file)
