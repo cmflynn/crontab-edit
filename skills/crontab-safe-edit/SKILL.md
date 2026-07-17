@@ -1,5 +1,5 @@
 ---
-name: safe-crontab-edit
+name: crontab-safe-edit
 description: >-
   Edit, install, replace, or restore a user crontab from the command line
   without silently wiping it. Use whenever the task touches `crontab` — "restore

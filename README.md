@@ -1,19 +1,19 @@
-# safe-crontab-edit
+# crontab-safe-edit
 
 A Claude Code / agent skill for editing a user crontab from the command line
 without silently wiping it.
 
 Two rules: **back up first**, then **install via stdin** (`crontab - < file`) and
 verify by reading back — never the `crontab <file>` form, which can silently
-no-op in sandboxed/macOS shells.
+no-op in sandboxed/restricted shells.
 
 ## Install
 
 ```bash
-npx skills add cmflynn/safe-crontab-edit-skill
+npx skills add cmflynn/crontab-safe-edit
 ```
 
-Or copy `skills/safe-crontab-edit/SKILL.md` into `~/.claude/skills/safe-crontab-edit/`.
+Or copy `skills/crontab-safe-edit/SKILL.md` into `~/.claude/skills/crontab-safe-edit/`.
 
 ## License
 
