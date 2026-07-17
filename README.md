@@ -1,4 +1,4 @@
-# crontab-safe-edit
+# crontab-edit
 
 A Claude Code / agent skill for editing a user crontab from the command line
 without silently wiping it.
@@ -10,10 +10,10 @@ no-op in sandboxed/restricted shells.
 ## Install
 
 ```bash
-npx skills add cmflynn/crontab-safe-edit
+npx skills add cmflynn/crontab-edit
 ```
 
-Or copy `skills/crontab-safe-edit/SKILL.md` into `~/.claude/skills/crontab-safe-edit/`.
+Or copy `skills/crontab-edit/SKILL.md` into `~/.claude/skills/crontab-edit/`.
 
 ## License
 
